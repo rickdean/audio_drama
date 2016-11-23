@@ -1,65 +1,73 @@
 'use strict';
-/*jslint node: true */
-/*jshint esversion: 6 */
 
 const store = require('../store');
-const app = require('./app');
-const logic = require('./game.js');
+//const app = require('./app');
 
 const clear = (modal) => {
-    setTimeout(function() {
-        $(modal).modal('hide');
-    }, 500);
-    $(modal).on('hidden.bs.modal', function() {
-        $(this).find("input,textarea,select").val('').end();
-        $('.modal-success').text('');
-    });
+  setTimeout(function() {
+    $(modal).modal('hide');
+  }, 2000);
+  $(modal).on('hidden.bs.modal', function() {
+    $(this).find("input,textarea,select").val('').end();
+    $('.modal-success').text('');
+  });
 };
 
-const success = (data) => {
-    $('.messages').text('Domo arigato...You Must Sign In.');
-    clear('#signUp');
-    clear('#changePass');
+const clearForm = (selector) => {
+  $(selector).find("input,textarea,select").val('').end();
 };
 
-const signOutSuccess = (data) => {
-    $('.messages').text('Be well and walk long...');
-    $('.wrap-board').hide(500);
-    $('#reset').hide(500);
-    $('.button-wrapper').hide(500);
-    $('.title').hide(500);
-    $('#game-stats').hide();
-    $('.message').hide();
-    $('.message').text("");
-    clear('#signOut');
+
+const signUpSuccess = () => {
+  $('.modal-success').text("You may Login now.");
+  clear('#sign-up-modal');
 };
 
-const signInSuccess = data => {
-    store.user = data.user;
-    success(data);
-    $('.messages').text('You may play but please create a game first...');
-    $('.title').show(500);
-    $('.begin').hide(500);
-    $('.proverb').show();
-    clear('#signIn');
+const success = () => {
+  console.log();
+  $('.messages').text('Success');
+  clear('#signUp');
+  clear('#changePass');
+};
+
+const signOutSuccess = () => {
+  $('.modal-success').text("You Are Signed Out.");
+  clear('#sign-out-modal');
+  $('#reset').hide(500);
+  $('.button-wrapper').hide(500);
+  $('.title').hide(500);
+  $('.message').hide();
+  clear('#signOut');
+};
+
+const signInSuccess = (data) => {
+  store.user = data.user;
+  success(data);
+  $('.title').show(500);
+  $('.begin').hide(500);
+  $('.proverb').show();
+  clearForm('.sign-in-form');
+  console.log(data);
 };
 
 const passSuccess = (data) => {
-    $('.messages').text('Your new secret word is safe with me.');
-    clear('#signUp');
-    clear('#changePass');
+  $('.modal-success').text("Password Succesfully Changed.");
+  clear('#change-password-modal');
 };
 
 const failure = (error) => {
-    $('.messages').text('So sorry...you failed authentication.');
-    clear('#signIn');
+  $('.messages').text('Authentication Failed.');
+  clear('#signIn');
 };
 
 
 module.exports = {
-    signInSuccess,
-    signOutSuccess,
-    passSuccess,
-    failure,
-    success,
+  clear,
+  clearForm,
+  signUpSuccess,
+  signInSuccess,
+  signOutSuccess,
+  passSuccess,
+  failure,
+  success,
 };

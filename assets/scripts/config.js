@@ -8,10 +8,3 @@ const config = {
 };
 
 module.exports = config;
-
-
-
-
-
-
-//host: 'https://aqueous-atoll-85096.herokuapp.com',

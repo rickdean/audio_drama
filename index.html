@@ -1,96 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <title>Audio Drama Entry</title>
 
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Audio Drama Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="dependencies.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
-<body>
+<body class="container-fluid">
+    <header>
+        <!-- START NAV BAR -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                    <!-- <a class="navbar-brand" href="#">Welcome, <span id="welcome-user"> </span></a> -->
+                    <p class="navbar-brand" id="welcome-message"> </p>
+                </div>
 
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- <ul class="nav navbar-nav"> -->
+                    <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+                    <!-- <li><a href="#">Link</a></li> -->
+                    <!-- <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li> -->
+                    <!-- </ul> -->
+                    <form class="navbar-form navbar-left sign-in-form">
+                        <div class="form-group">
+                            <input type="email" name="credentials[email]" class="form-control" id="sign-in-email" placeholder="email">
+                            <input type="password" name="credentials[password]" class="form-control" id="sign-in-password" placeholder="password">
+                        </div>
+                        <button type="submit" class="btn btn-default">Login</button>
+                    </form>
 
-    <div class="login">
+                    <form class="navbar-form navbar-right" id="hide-signup">
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#sign-up-modal">Register</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- <li><p>New user? Sign Up here!</p></li>
+                <li> <button type="submit" class="btn btn-default">Sign Up</button></li> -->
+                        <li class="dropdown" id="hide-myaccount">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a>
+                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#change-password-modal">
+                          Change Password
+                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#sign-out-modal">
+                          Log Out
+                        </button>
+                                    </a>
+                                </li>
+                                <!-- <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- END NAV BAR -->
+    </header>
 
-        <form class="form-signin">
-            <h2 class="form-signin-heading">Please sign in</h2>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <label for="confirmPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password" required>
-
-            <!--    <input type="checkbox" value="remember-me"> Remember me -->
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            <div class="checkbox">Don't have an account? Register</div>
-            <div class="passUpdate">Update Password</div>
-        </form>
-
+    <!-- START MAIN -->
+    <div class="container">
+        <div class="col-xs flex-xs-middle" id='splash'>
+            <img src="http://evolutiontalk.com/images/mad1080.jpg">
+        </div>
     </div>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-                <a class="navbar-brand" href="#">Audio Drama Show Entry</a>
-            </div>
-        </div>
-    </nav>
+    <div id="content" class="col-xs flex-xs-middle">
+    </div>
+    </div>
+    <!-- END MAIN -->
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-                <ul class="nav nav-sidebar">
-                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Shows</a></li>
-                    <li><a href="#">Voice Artists</a></li>
-                    <li><a href="#">Sign-Out</a></li>
-                    <li><a href="#">Update Password</a></li>
-                </ul>
-                <ul class="nav nav-sidebar" id='more-items'>
-                    <li><a href="">Nav item</a></li>
-                    <li><a href="">Nav item again</a></li>
-                    <li><a href="">One more nav</a></li>
-                    <li><a href="">Another nav item</a></li>
-                    <li><a href="">More navigation</a></li>
-                </ul>
-
-            </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id='showboard'>
-                <h1 class="page-header">Shows</h1>
-
-            </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id='vaboard'>
-                <h1 class="page-header">Voice Artists</h1>
-
-            </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id='splash'>
-                <img src="http://evolutiontalk.com/images/mad1080.png">
-
-
+    <!-- START MODALS -->
+    <!-- START SIGN-UP MODAL -->
+    <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="sign-up-modal-label">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                    <form class='sign-up-form'>
+                        <div class="form-group">
+                            <label for="sign-up-email">Email address<span class="asterisk">*</span></label>
+                            <input type="email" name="credentials[email]" class="form-control" id="sign-up-email" placeholder="Email" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="sign-up-password">Password<span class="asterisk">*</span></label>
+                            <input type="password" name="credentials[password]" class="form-control" id="sign-up-password" placeholder="Password" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="sign-up-confirm-password">Confirm Password<span class="asterisk">*</span></label>
+                            <input type="password" name="credentials[password_confirmation]" class="form-control" id="sign-up-confirm-password" placeholder="Confirm Password" required="required">
+                        </div>
+                        <div class="modal-footer">
+                            <p class="modal-success"></p>
+                            <button type="button" class="btn btn-default reset" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- END SIGN-UP MODAL -->
+
+    <!-- START CHANGE PASSWORD MODAL -->
+    <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="change-password-modal-label">Change Password</h4>
+                </div>
+                <div class="modal-body">
+                    <form class='change-password-form'>
+                        <div class="form-group">
+                            <label for="change-password-old">Old Password<span class="asterisk">*</span></label>
+                            <input type="password" name="passwords[old]" class="form-control" id="change-password-old" placeholder="Old Password" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="change-password-new">New Password<span class="asterisk">*</span></label>
+                            <input type="password" name="passwords[new]" class="form-control" id="change-password-new" placeholder="New Password" required="required">
+                        </div>
+                        <div class="modal-footer">
+                            <p class="modal-success"></p>
+                            <button type="button" class="btn btn-default reset" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CHANGE PASSWORD MODAL -->
+
+    <!-- START SIGN OUT MODAL -->
+    <div class="modal fade" id="sign-out-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="sign-out-modal-label">Sign Out</h4>
+                </div>
+                <div class="modal-body">
+                    <form class='sign-out-form'>
+                        <div class="form-group">
+                            <p>Are you sure you want to sign-out?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <p class="modal-success"></p>
+                            <button type="submit" class="btn btn-default">Sign Out</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SIGN OUT MODAL -->
+    <!-- END MODALS -->
 </body>
 
 </html>
