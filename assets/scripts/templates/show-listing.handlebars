@@ -1,18 +1,4 @@
-{{#each shows as |show|}}
-{{>partial}}
-
-  <!-- {{> partial}}
-  Don't uncomment yet -->
-
-  <h1> <small>Show: {{show.title}}
-</small></h1>
-  <div class = 'desc'>
-    {{#if show.description}}
-      {{show.description}}
-    {{else}}
-      No description.
-    {{/if}}
-  </div>
-  <button class='test-button'type='button' name='button'>Update Show</button>
-  <button class='delete-book'type='button' name='button'>Delete Show {{show.id}}</button>
-{{/each}}
+<h2> Shows </h2>
+{{#shows}}
+  {{> shows}}
+{{/shows}}

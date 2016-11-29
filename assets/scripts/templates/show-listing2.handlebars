@@ -1,0 +1,28 @@
+{{#each shows as |show|}}
+{{!-- {{>partial}} --}}
+
+  <!-- {{> partial}}
+  Don't uncomment yet -->
+
+  <h1> <small>Show: {{show.title}}
+</small></h1>
+  <div class = 'desc'>
+    {{#if show.description}}
+      {{show.description}}
+    {{else}}
+      No description.
+    {{/if}}
+  </div>
+  {{/each}}
+<!--  <button class='test-button'type='button' name='button'>Update Show</button>
+  <button class='deleteShowButton'type='button' name='button' value={{show.id}} onclick="showRemove({show.id})">Delete Show {{show.id}}</button>
+-->
+
+
+
+<!-- HELPER
+<script>Handlebars.registerHelper('json', showRemove(context) {
+    return JSON.stringify(context).replace(/"/g, '&quot;');
+});
+</script>
+-->

@@ -91,19 +91,31 @@
     </header>
 
     <!-- START MAIN -->
+
     <div class="container">
         <div class="col-xs flex-xs-middle" id='splash'>
             <img src="http://evolutiontalk.com/images/mad1080.jpg">
         </div>
     </div>
 
+
+    <form id="get-shows">
+          <button type="submit" name="submit" class="editdeletebtns">
+            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Display shows
+          </button>
+       </form>
+
+       </br>
+    <!-- Display the titles -->
+    <div class="title-display"></div>
+
+<!--
     <div class="buttons">
     <button id="getShowsButton" class="btn btn-default">Get Shows!</button>
-    <!-- <button id="clearBooksButton" class="btn btn-default">Clear Books!</button> -->
-    <!-- <button id="getTitlesButton" class="btn btn-default">Get Titles!</button> -->
     <div id="content" class="content">
     </div>
     </div>
+  -->
 
 <div>
   <form action="/shows" class="new_show" id="createShowButton" method="post">
@@ -128,6 +140,23 @@
                <button type="submit" class="button" name="submit">Add</button>
            </form>
          </div> -->
+         <!-- Delete Show Title -->
+         <div class="modal fade" id="deleteShowModal">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+               <h4 class="modal-title">Are you sure?</h4>
+             </div>
+             <div class="modal-body">
+               <div class="form-group">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                 <button type="submit" class="btn btn-danger delete-show-button" id="delete-show-button" data-dismiss="modal">Yes</button>
+               </div>
+             </div>
+           </div>
+         </div>
+         </div>
 
 
     <!-- END MAIN -->
@@ -222,6 +251,7 @@
     </div>
     <!-- END SIGN OUT MODAL -->
     <!-- END MODALS -->
+
 </body>
 
 </html>
