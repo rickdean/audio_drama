@@ -1,5 +1,9 @@
 'use strict';
 
+const clearInputField = () => {
+  $('.input').val('');
+};
+
 const success = (data) => {
   console.log(data);
 };
@@ -7,9 +11,6 @@ const success = (data) => {
 const failure = (error) => {
   console.log(error);
 };
-
-//const showShowsTemplate = require('../templates/show-listing.handlebars');
-//const showTitlesTemplate = require('../templates/book-titles.handlebars');
 
 const showShowsTemplate = require('../templates/show-listing.handlebars');
 
@@ -28,7 +29,11 @@ const createShowSuccess = (data) => {
 };
 
 const createShowFail = () => {
-//  clearInputField();
+};
+
+const updateShowSuccess = () => {
+  clearInputField();
+  $('#updateShowModal').modal('hide');
 };
 
 module.exports = {
@@ -37,4 +42,5 @@ module.exports = {
   getShowsSuccess,
   createShowSuccess,
   createShowFail,
+  updateShowSuccess,
 };

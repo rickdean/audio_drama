@@ -50,17 +50,23 @@ const onCreateShow = function (event) {
       .fail(ui.failure);
   };
 
+  const updateId =  function (event){
+  event.preventDefault();
+  let id = $(event.target).attr("data-show-id");
+  $(".update-show-button").attr("data-show-id", id);
+};
 
-  // const onDeleteShow = function (event) {
-  //   event.preventDefault();
-  //   let data = getFormFields(event.target);
-  //   api.deleteShow(data)
-  //     .done(ui.success)
-  //     .fail(ui.failure);
-  // //  api.indexUserPoses()
-  //   //  .done(ui.indexUserPoseSuccess)
-  //   //  .fail(ui.failure);
-  //  };
+const onUpdateShow = function (event) {
+  event.preventDefault();
+  let id = $(".update-show-button").attr("data-show-id");
+  let data = getFormFields(event.target);
+  api.updateShow(data, id)
+    .done( function(){
+      ui.updateShowSuccess();
+      onGetShows(event);
+    })
+    .fail(ui.failure);
+};
 
 const addHandlers = () => {
   $('#get-shows').on('submit', onGetShows);
@@ -69,9 +75,9 @@ const addHandlers = () => {
   $('#createShowButton').on('submit', onCreateShow);
   $('.title-display').on('click','.delete-show',deleteId);
   $('#delete-show-button').on('click', onDeleteShow);
-  //$('#clearBooksButton').on('click', onClearBooks);
-  //$('#getTitlesButton').on('click', onGetTitles);
-  //$('.test-button').on('click', alerty);
+  $('.title-display').on('click','.update-show',updateId);
+  $('#updateShowModal').on('submit', onUpdateShow);
+
 };
 
 

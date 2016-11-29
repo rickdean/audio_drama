@@ -48,10 +48,22 @@ const deleteShow = (id) => {
   });
 };
 
+const updateShow = (data, id) => {
+  return $.ajax({
+    url: app.host + '/shows/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+    data,
+  });
+};
+
 
 module.exports = {
   getShows,
   displayShow,
   createShow,
   deleteShow,
+  updateShow,
 };
