@@ -14,18 +14,6 @@ const getShows = () => {
   });
 };
 
-const displayShow = (data) => {
-  let show_id = data.show.id;
-  return $.ajax({
-    url: app.host + '/projects/' + show_id,
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token,
-    }
-  });
-};
-
-
 const createShow = (data) => {
   //let token = app.user.token;
   return $.ajax({
@@ -62,7 +50,6 @@ const updateShow = (data, id) => {
 
 module.exports = {
   getShows,
-  displayShow,
   createShow,
   deleteShow,
   updateShow,

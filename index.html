@@ -8,7 +8,14 @@
 
     <script src="dependencies.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script>
+          $(document).ready(function(){
+          $("#addShow").click(function(){
+            $("#addBox").show();
+          });
+         });
+     </script>
 </head>
 
 <body class="container-fluid">
@@ -92,54 +99,56 @@
 
     <!-- START MAIN -->
 
-    <div class="container">
+    <div class="logo">
         <div class="col-xs flex-xs-middle" id='splash'>
             <img src="http://evolutiontalk.com/images/mad1080.jpg">
         </div>
     </div>
+  </br>
 
+  <div class="row">
+    <div class="col-sm-4">
+<button type="button" class="btn btn-primary btn-lg" id="addShow">Create Show</button>
+</br>
+</br>
+</br>
+<button type="submit" name="submit" class="btn btn-primary btn-lg" id="get-shows">View Shows
+</button>
+</br>
+</div>
 
-    <form id="get-shows">
-          <button type="submit" name="submit" class="editdeletebtns">
-            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Display shows
-          </button>
-       </form>
+<div class="col-sm-8">
 
-       </br>
-    <!-- Display the titles -->
-    <div class="title-display"></div>
-
-<!--
-    <div class="buttons">
-    <button id="getShowsButton" class="btn btn-default">Get Shows!</button>
-    <div id="content" class="content">
-    </div>
-    </div>
-  -->
-
-<div>
+<div id='addBox'>
   <form action="/shows" class="new_show" id="createShowButton" method="post">
       <label for="show-title">title</label>
       <input id="title" name="show[title]" type="text" />
+      <label for="show-genre">genre</label>
+      <input id="genre" name="show[genre]" type="text" />
+      <label for="show-desc">Show Description</label>
+      <textarea id="description" name="show[description]"/></textarea>
+      <label for="show-date">Release Date</label>
+      <input id="release_date" name="show[release_date]" type="text" />
+      <label for="show-eps">#Episodes</label>
+      <input id="episodes" name="show[episodes]" type="number" />
+      <label for="show-rss">RSS</label>
+      <input id="rss" name="show[rss]" type="text" />
+      <label for="show-url">URL</label>
+      <input id="site" name="show[site]" type="text" />
+      <label for="show-va">Voice Artist</label>
+      <input id="voice_artist_string" name="show[voice_artist_string]" type="text" />
+    </br>
+    </br>
     <button type="submit" class="button" name="submit">Add</button></form>
 </div>
-    <!-- <div>
-           <h4>Create Show</h4>
-           <form id="createShowButton">
-               <div class="form-group">
-                 <input type="text" class="standard-input" name="show_title[title]" placeholder="Show Title">
-                 <input type="text" class="standard-input" name="show_genre[genre]" placeholder="Show Genre">
-                 <input type="text" class="standard-input" name="show_description[description]" placeholder="Show Description">
-                 <input type="text" class="standard-input" name="show_coverart[coverart]" placeholder="Cover Art URL">
-                 <input type="text" class="standard-input" name="show_release_date[release_date]" placeholder="Release Date">
-                 <input type="text" class="standard-input" name="show_episodes[episodes]" placeholder="# of Episodes">
-                 <input type="text" class="standard-input" name="show_rss[rss]" placeholder="RSS Feed">
-                 <input type="text" class="standard-input" name="show_site[site]" placeholder="Site URL">
-                 <input type="text" class="standard-input" name="voice_artist[voice_artist_string]" placeholder="Voice Artist">
-               </div>
-               <button type="submit" class="button" name="submit">Add</button>
-           </form>
-         </div> -->
+</br>
+
+    <!-- Display the titles -->
+    <div class="title-display"></div>
+
+  </div>
+</div>
+
          <!-- Delete Show Title -->
          <div class="modal fade" id="deleteShowModal">
          <div class="modal-dialog">
@@ -171,6 +180,14 @@
                    <fieldset>
                      <div class="form-group">
                        <input type="text" class="form-control input" name="show[title]" placeholder="New Title">
+                       <input type="text" class="form-control input" name="show[genre]" placeholder="New Genre">
+                       <textarea class="form-control input" name="show[description]" placeholder="Description"></textarea>
+                       <input type="text" class="form-control input" name="show[voice_artist_string]" placeholder="Voice Artist">
+                       <input type="text" class="form-control input" name="show[site]" placeholder="Site">
+                       <input type="text" class="form-control input" name="show[rss]" placeholder="RSS">
+                       <input type="text" class="form-control input" name="show[episodes]" placeholder="#Episodes">
+                       <input type="text" class="form-control input" name="show[release_date]" placeholder="Release Date">
+                       <input type="text" class="form-control input" name="show[coverart]" placeholder="Image Source">
                      </div>
                        <button type="submit" class="btn btn-primary pull-right update-show-button" name="submit">Update</button>
                    </fieldset>
@@ -179,6 +196,8 @@
              </div>
            </div>
            </div>
+
+
     <!-- END MAIN -->
 
     <!-- START MODALS -->

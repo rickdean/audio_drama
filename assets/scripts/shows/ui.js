@@ -26,6 +26,7 @@ const getShowsSuccess = (shows) => {
 
 const createShowSuccess = (data) => {
   console.log(data);
+  $("#addBox").hide();
 };
 
 const createShowFail = () => {
@@ -35,6 +36,7 @@ const updateShowSuccess = () => {
   clearInputField();
   $('#updateShowModal').modal('hide');
 };
+
 
 module.exports = {
   success,
