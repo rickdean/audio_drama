@@ -45,7 +45,11 @@ const signInSuccess = (data) => {
     $('.logo').hide(500);
     $('#addShow').show(500);
     $('#get-shows').show(500);
+    $('.title-display').hide();
+    $('#addBox').hide();
+    $(".bigMessage").hide();
     clearForm('.sign-in-form');
+
     console.log(data);
 };
 

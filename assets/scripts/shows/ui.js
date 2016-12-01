@@ -17,14 +17,16 @@ const showShowsTemplate = require('../templates/show-listing.handlebars');
 const getShowsSuccess = (shows) => {
   $('.title-display').html(showShowsTemplate(shows));
   $(".bigMessage").hide();
+  $('.title-display').show(500);
   console.log(shows);
 };
 
 
 const createShowSuccess = (data) => {
   console.log(data);
+  clearInputField();
   $("#addBox").hide();
-  $(".bigMessage").text("Show Created!");
+  $(".bigMessage").show(500);
 };
 
 const createShowFail = () => {
