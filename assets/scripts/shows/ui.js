@@ -16,6 +16,7 @@ const showShowsTemplate = require('../templates/show-listing.handlebars');
 
 const getShowsSuccess = (shows) => {
   $('.title-display').html(showShowsTemplate(shows));
+  $(".bigMessage").hide();
   console.log(shows);
 };
 

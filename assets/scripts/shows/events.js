@@ -48,7 +48,6 @@ const onCreateShow = function (event) {
   event.preventDefault();
   let id = $(event.target).attr("data-show-id");
   $(".update-show-button").attr("data-show-id", id);
-  $(".update-genre-button").attr("data-show-id", id);
 };
 
 const onUpdateShow = function (event) {
