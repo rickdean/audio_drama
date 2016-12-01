@@ -19,10 +19,6 @@ const getShowsSuccess = (shows) => {
   console.log(shows);
 };
 
-// const getShowsSuccess = (shows) => {
-// console.log('show us the ', shows);
-// $('#content').html(showShowsTemplate(shows));
-// };
 
 const createShowSuccess = (data) => {
   console.log(data);
