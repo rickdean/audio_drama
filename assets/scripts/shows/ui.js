@@ -23,6 +23,7 @@ const getShowsSuccess = (shows) => {
 const createShowSuccess = (data) => {
   console.log(data);
   $("#addBox").hide();
+  $(".bigMessage").text("Show Created!");
 };
 
 const createShowFail = () => {

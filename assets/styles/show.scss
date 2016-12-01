@@ -12,45 +12,61 @@ h1 {
   font-size: 4em;
 }
 
+.messages {
+  color: #ffffff;
+}
+
 div {
   text-align: center;
 }
 
-.logo {
-  display: none;
-}
-
+.logo {}
 
 #addBox {
   display: none;
   position: absolute;
 }
 
+.bigMessage {
+  font-size: 80px;
+  position: absolute;
+}
+
+#addShow{
+  display: none;
+}
+
+#get-shows {
+  display: none;
+}
+
 .title-display {
   margin-right: 300px;
 }
 
-
-label, input, textarea, {
-    display: inline-block;
+,
+input,
+label,
+textarea {
+  display: inline-block;
     vertical-align: baseline;
     width: 200px;
 }
 
-
 label {
-    color: #2D2D2D;
-    font-size: 15px;
+  color: #2D2D2D;
+  font-size: 15px;
 }
 
-form, input {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+form,
+input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 form {
-    width: 350px;
+  width: 350px;
 }
 
 .project {
@@ -60,7 +76,6 @@ form {
 #content {
   font-size: 1.2em;
 }
-
 
 .navbar {
   background-color: $nav;
