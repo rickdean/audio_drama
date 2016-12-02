@@ -18,6 +18,7 @@ const getShowsSuccess = (shows) => {
   $('.title-display').html(showShowsTemplate(shows));
   $(".bigMessage").hide();
   $('.title-display').show(500);
+  $("#addBox").hide();
   console.log(shows);
 };
 
