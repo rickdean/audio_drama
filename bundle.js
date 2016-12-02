@@ -222,7 +222,7 @@ webpackJsonp([0],[
 	/*jshint esversion: 6 */
 
 	var app = {
-	  host: 'http://localhost:4741'
+	  host: 'https://audiodrama.herokuapp.com/'
 	};
 
 	module.exports = app;
