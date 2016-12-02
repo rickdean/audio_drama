@@ -17,6 +17,7 @@
             $(".title-display").hide(500);
           });
          });
+
      </script>
 </head>
 
@@ -106,21 +107,21 @@
 <div id='addBox'>
   <form action="/shows" class="new_show" id="createShowButton" method="post">
       <label for="show-title">title</label>
-      <input id="title" name="show[title]" type="text" />
+      <input id="title" class="input" name="show[title]" type="text" />
       <label for="show-genre">genre</label>
-      <input id="genre" name="show[genre]" type="text" />
+      <input id="genre" class="input" name="show[genre]" type="text" />
       <label for="show-desc">Show Description</label>
-      <textarea id="description" name="show[description]"/></textarea>
+      <textarea id="description" class="input"  name="show[description]"/></textarea>
       <label for="show-date">Release Date</label>
-      <input id="release_date" name="show[release_date]" type="text" />
+      <input id="release_date" class="input" class="input" name="show[release_date]" type="text" />
       <label for="show-eps">#Episodes</label>
-      <input id="episodes" name="show[episodes]" type="number" />
+      <input id="episodes" class="input" name="show[episodes]" type="number" />
       <label for="show-rss">RSS</label>
-      <input id="rss" name="show[rss]" type="text" />
+      <input id="rss" class="input" class="input" name="show[rss]" type="text" />
       <label for="show-url">URL</label>
-      <input id="site" name="show[site]" type="text" />
+      <input id="site" class="input" name="show[site]" type="text" />
       <label for="show-va">Voice Artist</label>
-      <input id="voice_artist_string" name="show[voice_artist_string]" type="text" />
+      <input id="voice_artist_string" class="input" name="show[voice_artist_string]" type="text" />
     </br>
     </br>
     <button type="submit" class="button" name="submit">Add</button></form>
@@ -275,7 +276,7 @@
     </div>
     <!-- END SIGN OUT MODAL -->
     <!-- END MODALS -->
-v1.2
+<p class="version">v1.3</p>
 </body>
 
 </html>
