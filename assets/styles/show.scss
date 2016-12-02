@@ -16,6 +16,10 @@ h1 {
   color: #ffffff;
 }
 
+.row {
+  text-align: left;
+}
+
 div {
   text-align: center;
 }
@@ -84,4 +88,8 @@ form {
 
 .modal-success {
   color: $black;
+}
+
+.version {
+  font-size: 10px;
 }
