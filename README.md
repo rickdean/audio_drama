@@ -5,11 +5,11 @@
 Welcome to the Audio Drama Show Entry App designed specifically for audio drama producers.
 There are many times when an audio producer needs to send out links quickly (i.e. during
 interviews, listener queries, marketing) and this app serves as a quick means for
-accessing this information.
+accessing and distributing this information.
 
-Demo Site: https://rickdean.github.io/audio_drama/
-GitHub: https://github.com/rickdean/audio_drama
-GitHub API: https://github.com/rickdean/audio_drama_api
+- Demo Site: https://rickdean.github.io/audio_drama/
+- GitHub: https://github.com/rickdean/audio_drama
+- GitHub API: https://github.com/rickdean/audio_drama_api
 
 ## User Stories
 
@@ -33,8 +33,8 @@ The following frameworks and programmming languages were used during the
 development process.
 
 Javascript & JQuery
-[!Ruby on Rails](http://rubyonrails.org/)
-[!Bootstrap](https://v4-alpha.getbootstrap.com/)
-[!Handlebars](http://handlebarsjs.com/)
-[!WDI Browser template](https://github.com/ga-wdi-boston/browser-template)
-[!WDI Rails API Template}(https://github.com/ga-wdi-boston/rails-api-template)
+- [!Ruby on Rails](http://rubyonrails.org/)
+- [!Bootstrap](https://v4-alpha.getbootstrap.com/)
+- [!Handlebars](http://handlebarsjs.com/)
+- [!WDI Browser template](https://github.com/ga-wdi-boston/browser-template)
+- [!WDI Rails API Template](https://github.com/ga-wdi-boston/rails-api-template)
