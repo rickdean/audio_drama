@@ -70,6 +70,20 @@ const addHandlers = () => {
   $('#delete-show-button').on('click', onDeleteShow);
   $('.title-display').on('click','.update-show',updateId);
   $('#updateShowModal').on('submit', onUpdateShow);
+  $('.title-display').on('click','.update-genre',updateId);
+  $('#updateGenreModal').on('submit', onUpdateShow);
+  $('.title-display').on('click','.update-va',updateId);
+  $('#updateVaModal').on('submit', onUpdateShow);
+  $('.title-display').on('click','.update-site',updateId);
+  $('#updateSiteModal').on('submit', onUpdateShow);
+  $('.title-display').on('click','.update-rss',updateId);
+  $('#updateRssModal').on('submit', onUpdateShow);
+  $('.title-display').on('click','.update-ep',updateId);
+  $('#updateEpModal').on('submit', onUpdateShow);
+  $('.title-display').on('click','.update-date',updateId);
+  $('#updateDateModal').on('submit', onUpdateShow);
+  $('.title-display').on('click','.update-desc',updateId);
+  $('#updateDescModal').on('submit', onUpdateShow);
 };
 
 
