@@ -165,14 +165,6 @@
                    <fieldset>
                      <div class="form-group">
                        <input type="text" class="form-control input" name="show[title]" placeholder="New Title">
-                       <input type="text" class="form-control input" name="show[genre]" placeholder="New Genre">
-                      <!--
-                       <textarea class="form-control input" name="show[description]" placeholder="Description"></textarea>
-                       <input type="text" class="form-control input" name="show[voice_artist_string]" placeholder="Voice Artist">
-                       <input type="text" class="form-control input" name="show[site]" placeholder="Site">
-                       <input type="text" class="form-control input" name="show[rss]" placeholder="RSS">
-                       <input type="text" class="form-control input" name="show[episodes]" placeholder="#Episodes">
-                       <input type="text" class="form-control input" name="show[release_date]" placeholder="Release Date"> -->
                      </div>
                        <button type="submit" class="btn btn-primary pull-right update-show-button" name="submit">Update</button>
                    </fieldset>
@@ -181,6 +173,154 @@
              </div>
            </div>
            </div>
+
+           <div class="modal fade" id="updateGenreModal">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h4 class="modal-title">Update Genre</h4>
+               </div>
+               <div class="modal-body">
+                 <form id="edit-show">
+                   <fieldset>
+                     <div class="form-group">
+                       <input type="text" class="form-control input" name="show[genre]" placeholder="New Genre">
+                     </div>
+                       <button type="submit" class="btn btn-primary pull-right update-genre-button" name="submit">Update</button>
+                   </fieldset>
+                 </form>
+               </div>
+             </div>
+           </div>
+           </div>
+
+           <div class="modal fade" id="updateVaModal">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h4 class="modal-title">Update VA</h4>
+               </div>
+               <div class="modal-body">
+                 <form id="edit-show">
+                   <fieldset>
+                     <div class="form-group">
+                       <input type="text" class="form-control input" name="show[voice_artist_string]" placeholder="New VA">
+                     </div>
+                       <button type="submit" class="btn btn-primary pull-right update-va-button" name="submit">Update</button>
+                   </fieldset>
+                 </form>
+               </div>
+             </div>
+           </div>
+           </div>
+
+           <div class="modal fade" id="updateSiteModal">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h4 class="modal-title">Update Site</h4>
+               </div>
+               <div class="modal-body">
+                 <form id="edit-show">
+                   <fieldset>
+                     <div class="form-group">
+                       <input type="text" class="form-control input" name="show[site]" placeholder="New Site">
+                     </div>
+                       <button type="submit" class="btn btn-primary pull-right update-site-button" name="submit">Update</button>
+                   </fieldset>
+                 </form>
+               </div>
+             </div>
+           </div>
+           </div>
+
+           <div class="modal fade" id="updateRssModal">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h4 class="modal-title">Update Rss</h4>
+               </div>
+               <div class="modal-body">
+                 <form id="edit-show">
+                   <fieldset>
+                     <div class="form-group">
+                       <input type="text" class="form-control input" name="show[rss]" placeholder="New RSS">
+                     </div>
+                       <button type="submit" class="btn btn-primary pull-right update-rss-button" name="submit">Update</button>
+                   </fieldset>
+                 </form>
+               </div>
+             </div>
+           </div>
+           </div>
+
+           <div class="modal fade" id="updateEpModal">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h4 class="modal-title">Update Ep.#</h4>
+               </div>
+               <div class="modal-body">
+                 <form id="edit-show">
+                   <fieldset>
+                     <div class="form-group">
+                       <input type="text" class="form-control input" name="show[episodes]" placeholder="New Ep#">
+                     </div>
+                       <button type="submit" class="btn btn-primary pull-right update-ep-button" name="submit">Update</button>
+                   </fieldset>
+                 </form>
+               </div>
+             </div>
+           </div>
+           </div>
+
+           <div class="modal fade" id="updateDateModal">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h4 class="modal-title">Update Date</h4>
+               </div>
+               <div class="modal-body">
+                 <form id="edit-show">
+                   <fieldset>
+                     <div class="form-group">
+                       <input type="text" class="form-control input" name="show[release_date]" placeholder="New Date">
+                     </div>
+                       <button type="submit" class="btn btn-primary pull-right update-date-button" name="submit">Update</button>
+                   </fieldset>
+                 </form>
+               </div>
+             </div>
+           </div>
+           </div>
+
+           <div class="modal fade" id="updateDescModal">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h4 class="modal-title">Update Desc.</h4>
+               </div>
+               <div class="modal-body">
+                 <form id="edit-show">
+                   <fieldset>
+                     <div class="form-group">
+                       <input type="text" class="form-control input" name="show[description]" placeholder="New Desc.">
+                     </div>
+                       <button type="submit" class="btn btn-primary pull-right update-desc-button" name="submit">Update</button>
+                   </fieldset>
+                 </form>
+               </div>
+             </div>
+           </div>
+           </div>
+
 
 
 
@@ -276,7 +416,7 @@
     </div>
     <!-- END SIGN OUT MODAL -->
     <!-- END MODALS -->
-<p class="version">v1.3</p>
+<p class="version">v1.4</p>
 </body>
 
 </html>

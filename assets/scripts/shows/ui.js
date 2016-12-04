@@ -36,6 +36,13 @@ const createShowFail = () => {
 const updateShowSuccess = () => {
   clearInputField();
   $('#updateShowModal').modal('hide');
+  $('#updateGenreModal').modal('hide');
+  $('#updateVaModal').modal('hide');
+  $('#updateSiteModal').modal('hide');
+  $('#updateRssModal').modal('hide');
+  $('#updateEpModal').modal('hide');
+  $('#updateDateModal').modal('hide');
+  $('#updateDescModal').modal('hide');
 };
 
 
