@@ -292,7 +292,7 @@ webpackJsonp([0],[
 	    $('#get-shows').show(500);
 	    clearForm('.sign-in-form');
 
-	    console.log(data);
+	    //console.log(data);
 	};
 
 	var passSuccess = function passSuccess(data) {
