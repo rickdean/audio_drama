@@ -50,7 +50,7 @@ const signInSuccess = (data) => {
     $('#get-shows').show(500);
     clearForm('.sign-in-form');
 
-    console.log(data);
+    //console.log(data);
 };
 
 const passSuccess = (data) => {
