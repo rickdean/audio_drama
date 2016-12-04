@@ -5,35 +5,66 @@
           <tr>
             <th>Title</th>
               <td class='row'>{{title}}</td>
+              <td class='row'>
+                <button class="btn btn-link btn-xs update-show" data-toggle="modal"
+              data-target="#updateShowModal" data-show-id= {{id}}>Edit Title
+              </button>
+            </td>
           </tr>
           <tr>
             <th>Genre</th>
               <td class='row'>{{genre}}</td>
+              <td class='row'>
+                <button class="btn btn-link btn-xs update-genre" data-toggle="modal"
+              data-target="#updateGenreModal" data-show-id= {{id}}>Edit Genre
+              </button>
           <tr>
             <th>Voice Artist</th>
               <td class='row'>{{voice_artist_string}}</td>
+              <td class='row'>
+                <button class="btn btn-link btn-xs update-va" data-toggle="modal"
+              data-target="#updateVaModal" data-show-id= {{id}}>Edit Voice Artist
+              </button>
           <tr>
             <th>Site</th>
               <td class='row'>{{site}}</td>
+              <td class='row'>
+                <button class="btn btn-link btn-xs update-site" data-toggle="modal"
+              data-target="#updateSiteModal" data-show-id= {{id}}>Edit Site URL
+              </button>
           <tr>
             <th>RSS</th>
               <td class='row'>{{rss}}</td>
+              <td class='row'>
+                <button class="btn btn-link btn-xs update-rss" data-toggle="modal"
+              data-target="#updateRssModal" data-show-id= {{id}}>Edit RSS
+              </button>
           <tr>
             <th>#Episodes</th>
             <td class='row'>{{episodes}}</td>
+            <td class='row'>
+              <button class="btn btn-link btn-xs update-ep" data-toggle="modal"
+            data-target="#updateEpModal" data-show-id= {{id}}>Edit # Episodes
+            </button>
           <tr>
             <th>Release Date</th>
             <td class='row'>{{release_date}}</td>
+            <td class='row'>
+              <button class="btn btn-link btn-xs update-date" data-toggle="modal"
+            data-target="#updateDateModal" data-show-id= {{id}}>Edit Release Date
+            </button>
           <tr>
             <th>Description</th>
             	<td class='row'>{{description}}</td>
+              <td class='row'>
+                <button class="btn btn-link btn-xs update-desc" data-toggle="modal"
+              data-target="#updateDescModal" data-show-id= {{id}}>Edit Description
+              </button>
           </tr>
       </tbody>
   </table>
-  <button class="btn btn-info btn-xs update-show" data-toggle="modal"
-data-target="#updateShowModal" data-show-id= {{id}}>Edit Title
-</button>
-  <button class="btn btn-info btn-xs delete-show" data-toggle="modal"
+
+  <button class="btn btn-danger btn-xs delete-show" data-toggle="modal"
   data-target="#deleteShowModal" data-show-id= {{id}}>Delete</button>
 
 </p>
