@@ -32,7 +32,7 @@ interface led, way
 The following frameworks and programmming languages were used during the
 development process.
 
-Javascript & JQuery
+- Javascript & JQuery
 - [!Ruby on Rails](http://rubyonrails.org/)
 - [!Bootstrap](https://v4-alpha.getbootstrap.com/)
 - [!Handlebars](http://handlebarsjs.com/)
