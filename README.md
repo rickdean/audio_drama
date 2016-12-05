@@ -10,7 +10,7 @@ accessing and distributing this information.
 - Demo Site: https://rickdean.github.io/audio_drama/
 - GitHub: https://github.com/rickdean/audio_drama
 - GitHub API: https://github.com/rickdean/audio_drama_api
-- [Wireframes](https://dl.dropboxusercontent.com/u/1833578/full%20stack.key)
+- [Wireframes](https://dl.dropboxusercontent.com/u/1833578/audio_app.pdf)
 
 ## User Stories
 
@@ -24,7 +24,7 @@ perspective.  In order to be an asset the following stories were considered:
 - A Producer would need the ability to view all cards at once
 - A Producer would need the ability to delete show 'cards'
 - A Producer would need the ability to navigate the application in an intuitive,
-interface led, way
+interface-led, way
 
 
 
