@@ -10,6 +10,7 @@ accessing and distributing this information.
 - Demo Site: https://rickdean.github.io/audio_drama/
 - GitHub: https://github.com/rickdean/audio_drama
 - GitHub API: https://github.com/rickdean/audio_drama_api
+- Deployed API: https://audiodrama.herokuapp.com/
 - [Wireframes](https://dl.dropboxusercontent.com/u/1833578/audio_app.pdf)
 
 ## User Stories
