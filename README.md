@@ -10,7 +10,7 @@ accessing and distributing this information.
 - Demo Site: https://rickdean.github.io/audio_drama/
 - GitHub: https://github.com/rickdean/audio_drama
 - GitHub API: https://github.com/rickdean/audio_drama_api
-- [!Wire Frames & ERD](https://www.dropbox.com/sh/cuewrcmuhxanh68/AABAR-ZLFyf0Ojz4nKhptlIRa?dl=0)
+- [Wireframes](https://dl.dropboxusercontent.com/u/1833578/full%20stack.key)
 
 ## User Stories
 
@@ -34,8 +34,8 @@ The following frameworks and programmming languages were used during the
 development process.
 
 - Javascript & JQuery
-- [!Ruby on Rails](http://rubyonrails.org/)
-- [!Bootstrap](https://v4-alpha.getbootstrap.com/)
-- [!Handlebars](http://handlebarsjs.com/)
-- [!WDI Browser template](https://github.com/ga-wdi-boston/browser-template)
-- [!WDI Rails API Template](https://github.com/ga-wdi-boston/rails-api-template)
+- [Ruby on Rails](http://rubyonrails.org/)
+- [Bootstrap](https://v4-alpha.getbootstrap.com/)
+- [Handlebars](http://handlebarsjs.com/)
+- [WDI Browser template](https://github.com/ga-wdi-boston/browser-template)
+- [WDI Rails API Template](https://github.com/ga-wdi-boston/rails-api-template)
