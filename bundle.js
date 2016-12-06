@@ -222,7 +222,8 @@ webpackJsonp([0],[
 	/*jshint esversion: 6 */
 
 	var app = {
-	  host: 'https://audiodrama.herokuapp.com/'
+	  // host: 'https://audiodrama.herokuapp.com/',
+	  host: 'http://localhost:4741'
 	};
 
 	module.exports = app;
@@ -351,7 +352,7 @@ webpackJsonp([0],[
 	var onDeleteShow = function onDeleteShow(event) {
 	  event.preventDefault();
 	  var id = $(this).attr("data-show-id");
-	  api.deleteShow(id).done(ui.success).fail(ui.failure);
+	  api.deleteShow(id).done(ui.getShowsSuccess).fail(ui.failure);
 	  api.getShows().done(ui.getShowsSuccess).fail(ui.failure);
 	};
 
@@ -470,7 +471,7 @@ webpackJsonp([0],[
 	};
 
 	var success = function success(data) {
-	  console.log(data);
+	  //  console.log(data);
 	};
 
 	var failure = function failure(error) {
@@ -484,7 +485,7 @@ webpackJsonp([0],[
 	  $(".bigMessage").hide();
 	  $('.title-display').show(500);
 	  $("#addBox").hide();
-	  console.log(shows);
+	  //console.log(shows);
 	};
 
 	var createShowSuccess = function createShowSuccess(data) {
