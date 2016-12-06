@@ -31,13 +31,14 @@ const onCreateShow = function (event) {
     event.preventDefault();
     let id = $(event.target).attr("data-show-id");
     $(".delete-show-button").attr("data-show-id", id);
+
   };
 
   const onDeleteShow = function (event) {
     event.preventDefault();
     let id = $(this).attr("data-show-id");
     api.deleteShow(id)
-      .done(ui.success)
+      .done(ui.getShowsSuccess)
       .fail(ui.failure);
     api.getShows()
       .done(ui.getShowsSuccess)
