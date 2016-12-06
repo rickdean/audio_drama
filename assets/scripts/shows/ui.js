@@ -45,10 +45,16 @@ const updateShowSuccess = () => {
   $('#updateDescModal').modal('hide');
 };
 
+const deleteShowsSuccess = (shows) => {
+  $('.title-display').html(showShowsTemplate(shows));
+  $('.title-display').show(500);
+  console.log('success');
+};
 
 module.exports = {
   success,
   failure,
+  deleteShowsSuccess,
   getShowsSuccess,
   createShowSuccess,
   createShowFail,
