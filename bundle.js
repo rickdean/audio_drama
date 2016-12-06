@@ -352,7 +352,7 @@ webpackJsonp([0],[
 	var onDeleteShow = function onDeleteShow(event) {
 	  event.preventDefault();
 	  var id = $(this).attr("data-show-id");
-	  api.deleteShow(id).done(ui.getShowsSuccess).fail(ui.failure);
+	  api.deleteShow(id).done(ui.deleteShowsSuccess).fail(ui.failure);
 	  api.getShows().done(ui.getShowsSuccess).fail(ui.failure);
 	};
 
@@ -509,9 +509,16 @@ webpackJsonp([0],[
 	  $('#updateDescModal').modal('hide');
 	};
 
+	var deleteShowsSuccess = function deleteShowsSuccess(shows) {
+	  $('.title-display').html(showShowsTemplate(shows));
+	  $('.title-display').show(500);
+	  console.log('success');
+	};
+
 	module.exports = {
 	  success: success,
 	  failure: failure,
+	  deleteShowsSuccess: deleteShowsSuccess,
 	  getShowsSuccess: getShowsSuccess,
 	  createShowSuccess: createShowSuccess,
 	  createShowFail: createShowFail,
