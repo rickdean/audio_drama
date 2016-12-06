@@ -38,7 +38,7 @@ const onCreateShow = function (event) {
     event.preventDefault();
     let id = $(this).attr("data-show-id");
     api.deleteShow(id)
-      .done(ui.getShowsSuccess)
+      .done(ui.deleteShowsSuccess)
       .fail(ui.failure);
     api.getShows()
       .done(ui.getShowsSuccess)
