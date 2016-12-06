@@ -5,7 +5,7 @@ const clearInputField = () => {
 };
 
 const success = (data) => {
-  console.log(data);
+//  console.log(data);
 };
 
 const failure = (error) => {
@@ -19,7 +19,7 @@ const getShowsSuccess = (shows) => {
   $(".bigMessage").hide();
   $('.title-display').show(500);
   $("#addBox").hide();
-  console.log(shows);
+  //console.log(shows);
 };
 
 
