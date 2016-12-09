@@ -40,9 +40,9 @@ const onCreateShow = function (event) {
     api.deleteShow(id)
       .done(ui.deleteShowsSuccess)
       .fail(ui.failure);
-    api.getShows()
-      .done(ui.getShowsSuccess)
-      .fail(ui.failure);
+    // api.getShows()
+    //   .done(ui.getShowsSuccess)
+    //   .fail(ui.failure);
   };
 
   const updateId =  function (event){
