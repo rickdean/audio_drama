@@ -9,7 +9,7 @@ const success = (data) => {
 };
 
 const failure = (error) => {
-  console.log(error);
+//  console.log(error);
 };
 
 const showShowsTemplate = require('../templates/show-listing.handlebars');
@@ -24,7 +24,7 @@ const getShowsSuccess = (shows) => {
 
 
 const createShowSuccess = (data) => {
-  console.log(data);
+  // console.log(data);
   clearInputField();
   $("#addBox").hide();
   $(".bigMessage").show(500);
@@ -46,9 +46,11 @@ const updateShowSuccess = () => {
 };
 
 const deleteShowsSuccess = (shows) => {
-  $('.title-display').html(showShowsTemplate(shows));
-  $('.title-display').show(500);
-  console.log('success');
+$('.title-display').hide(500);
+//  console.log("This is the " + shows);
+  // $('.title-display').html(showShowsTemplate(shows));
+  // $('.title-display').show(500);
+//  console.log('success');
 };
 
 module.exports = {
