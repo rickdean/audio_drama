@@ -352,7 +352,9 @@ webpackJsonp([0],[
 	  event.preventDefault();
 	  var id = $(this).attr("data-show-id");
 	  api.deleteShow(id).done(ui.deleteShowsSuccess).fail(ui.failure);
-	  api.getShows().done(ui.getShowsSuccess).fail(ui.failure);
+	  // api.getShows()
+	  //   .done(ui.getShowsSuccess)
+	  //   .fail(ui.failure);
 	};
 
 	var updateId = function updateId(event) {
@@ -474,7 +476,7 @@ webpackJsonp([0],[
 	};
 
 	var failure = function failure(error) {
-	  console.log(error);
+	  //  console.log(error);
 	};
 
 	var showShowsTemplate = __webpack_require__(12);
@@ -488,7 +490,7 @@ webpackJsonp([0],[
 	};
 
 	var createShowSuccess = function createShowSuccess(data) {
-	  console.log(data);
+	  // console.log(data);
 	  clearInputField();
 	  $("#addBox").hide();
 	  $(".bigMessage").show(500);
@@ -509,9 +511,11 @@ webpackJsonp([0],[
 	};
 
 	var deleteShowsSuccess = function deleteShowsSuccess(shows) {
-	  $('.title-display').html(showShowsTemplate(shows));
-	  $('.title-display').show(500);
-	  console.log('success');
+	  $('.title-display').hide(500);
+	  //  console.log("This is the " + shows);
+	  // $('.title-display').html(showShowsTemplate(shows));
+	  // $('.title-display').show(500);
+	  //  console.log('success');
 	};
 
 	module.exports = {
